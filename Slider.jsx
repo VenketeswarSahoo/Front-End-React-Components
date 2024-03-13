@@ -7,7 +7,7 @@ import { Mousewheel, Pagination } from 'swiper/modules';
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 
-const App = () => {
+const Slider = () => {
   const [swiper, setSwiper] = useState(null);
   const [showPrevButton, setShowPrevButton] = useState(false);
   const [showNextButton, setShowNextButton] = useState(true); // Initialize to true
@@ -87,4 +87,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default Slider;

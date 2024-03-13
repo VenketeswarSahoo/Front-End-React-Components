@@ -10,7 +10,7 @@ const Breadcrumbs = () => {
   return (
     <div>
       <Link to="/" className="text-sm text-zinc-500">
-        Home
+        Home{"/"}
       </Link>
       {pathnames.map((name, index) => {
         const routeTo = `/${pathnames.slice(0, index + 1).join("/")}`;
@@ -18,11 +18,10 @@ const Breadcrumbs = () => {
 
         return isLast
           ? <span key={name} className="text-sm text-zinc-500">
-              {" > "}
               {name}
             </span>
-          : <span key={name}>
-              <Link to={routeTo}>{name}</Link> {">"}
+          : <span key={name} className="text-sm text-zinc-500">
+              <Link to={routeTo}>{name}</Link> {"/"}
             </span>;
       })}
     </div>
